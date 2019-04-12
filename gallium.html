@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h2 id="useful-commands">Useful Commands</h2>
+<p><code>zless</code> for reading gzipped text files <code>tail -f filename</code> to provide a continuously monitored view of a file</p>
+<h2 id="file-system-structure">File System Structure</h2>
+<p>Copied from the ubuntu docs https://help.ubuntu.com/community/LinuxFilesystemTreeOverview</p>
+<p>Main directories</p>
+<p>The standard Ubuntu directory structure mostly follows the Filesystem Hierarchy Standard, which can be referred to for more detailed information.</p>
+<p>Here, only the most important directories in the system will be presented.</p>
+<p>/bin is a place for most commonly used terminal commands, like ls, mount, rm, etc.</p>
+<p>/boot contains files needed to start up the system, including the Linux kernel, a RAM disk image and bootloader configuration files.</p>
+<p>/dev contains all device files, which are not regular files but instead refer to various hardware devices on the system, including hard drives.</p>
+<p>/etc contains system-global configuration files, which affect the system's behavior for all users.</p>
+<p>/home home sweet home, this is the place for users' home directories.</p>
+<p>/lib contains very important dynamic libraries and kernel modules</p>
+<p>/media is intended as a mount point for external devices, such as hard drives or removable media (floppies, CDs, DVDs).</p>
+<p>/mnt is also a place for mount points, but dedicated specifically to &quot;temporarily mounted&quot; devices, such as network filesystems.</p>
+<p>/opt can be used to store additional software for your system, which is not handled by the package manager.</p>
+<p>/proc is a virtual filesystem that provides a mechanism for kernel to send information to processes.</p>
+<p>/root is the superuser's home directory, not in /home/ to allow for booting the system even if /home/ is not available.</p>
+<p>/run is a tmpfs (temporary file system) available early in the boot process where ephemeral run-time data is stored. Files under this directory are removed or truncated at the beginning of the boot process. (It deprecates various legacy locations such as /var/run, /var/lock, /lib/init/rw in otherwise non-ephemeral directory trees as well as /dev/.* and /dev/shm which are not device files.)</p>
+<p>/sbin contains important administrative commands that should generally only be employed by the superuser.</p>
+<p>/srv can contain data directories of services such as HTTP (/srv/www/) or FTP.</p>
+<p>/sys is a virtual filesystem that can be accessed to set or obtain information about the kernel's view of the system.</p>
+<p>/tmp is a place for temporary files used by applications.</p>
+<p>/usr contains the majority of user utilities and applications, and partly replicates the root directory structure, containing for instance, among others, /usr/bin/ and /usr/lib.</p>
+<p>/var is dedicated to variable data, such as logs, databases, websites, and temporary spool (e-mail etc.) files that persist from one boot to the next. A notable directory it contains is /var/log where system log files are kept.</p>
+<h2 id="useful-log-files">Useful Log Files</h2>
+<p>Most logs are in /var/log including: * Authorization log auth.log * Package management logs in folder apt * Boot log boot.log * Kernel log kern.log * Catch-all syslog</p>
+<p>A useful command is <code>tail -f filename</code> to provide a continuously monitored view of a file.</p>
+<h2 id="useful-config-files">Useful Config Files</h2>
+<ul>
+<li>most reside in /etc</li>
+<li>/etc/fstab disks mounted at boot</li>
+<li>/etc/apt folder has config files for package management</li>
+</ul>
+<h2 id="kernel-management">Kernel Management</h2>
+<h3 id="show-kernel-version">Show kernel version:</h3>
+<p><code>uname -a</code></p>
+<h3 id="docs">Docs:</h3>
+<p>First <code>apt install linux-doc</code> then look in <code>/usr/share/doc/linux-doc</code>.</p>
+<h2 id="gallium-specific-issues">Gallium-Specific Issues</h2>
+<h3 id="graphics-firmware-binaries">Graphics firmware binaries:</h3>
+<p>https://01.org/linuxgraphics/firmware/downloads</p>
+<h3 id="audio-issue">Audio issue:</h3>
+<p>https://github.com/GalliumOS/galliumos-distro/issues/379#issuecomment-379465153</p>
+<h3 id="shutdown-hang">Shutdown hang:</h3>
+<p>https://askubuntu.com/questions/808435/ubuntu-16-04-hangs-on-shutdown</p>
+</body>
+</html>
