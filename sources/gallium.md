@@ -1,6 +1,7 @@
 ## Useful Commands
 `zless` for reading gzipped text files
 `tail -f filename` to provide a continuously monitored view of a file
+`df -hT` for disk usage and format type
 
 ## File System Structure
 Copied from the ubuntu docs https://help.ubuntu.com/community/LinuxFilesystemTreeOverview
