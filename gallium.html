@@ -1,15 +1,25 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
-  <title></title>
-  <style type="text/css">code{white-space: pre;}</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>gallium</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
 </head>
 <body>
 <h2 id="useful-commands">Useful Commands</h2>
-<p><code>zless</code> for reading gzipped text files <code>tail -f filename</code> to provide a continuously monitored view of a file</p>
+<p><code>zless</code> for reading gzipped text files <code>tail -f filename</code> to provide a continuously monitored view of a file <code>df -hT</code> for disk usage and format type</p>
 <h2 id="file-system-structure">File System Structure</h2>
 <p>Copied from the ubuntu docs https://help.ubuntu.com/community/LinuxFilesystemTreeOverview</p>
 <p>Main directories</p>
@@ -18,18 +28,18 @@
 <p>/bin is a place for most commonly used terminal commands, like ls, mount, rm, etc.</p>
 <p>/boot contains files needed to start up the system, including the Linux kernel, a RAM disk image and bootloader configuration files.</p>
 <p>/dev contains all device files, which are not regular files but instead refer to various hardware devices on the system, including hard drives.</p>
-<p>/etc contains system-global configuration files, which affect the system's behavior for all users.</p>
-<p>/home home sweet home, this is the place for users' home directories.</p>
+<p>/etc contains system-global configuration files, which affect the system’s behavior for all users.</p>
+<p>/home home sweet home, this is the place for users’ home directories.</p>
 <p>/lib contains very important dynamic libraries and kernel modules</p>
 <p>/media is intended as a mount point for external devices, such as hard drives or removable media (floppies, CDs, DVDs).</p>
-<p>/mnt is also a place for mount points, but dedicated specifically to &quot;temporarily mounted&quot; devices, such as network filesystems.</p>
+<p>/mnt is also a place for mount points, but dedicated specifically to “temporarily mounted” devices, such as network filesystems.</p>
 <p>/opt can be used to store additional software for your system, which is not handled by the package manager.</p>
 <p>/proc is a virtual filesystem that provides a mechanism for kernel to send information to processes.</p>
-<p>/root is the superuser's home directory, not in /home/ to allow for booting the system even if /home/ is not available.</p>
+<p>/root is the superuser’s home directory, not in /home/ to allow for booting the system even if /home/ is not available.</p>
 <p>/run is a tmpfs (temporary file system) available early in the boot process where ephemeral run-time data is stored. Files under this directory are removed or truncated at the beginning of the boot process. (It deprecates various legacy locations such as /var/run, /var/lock, /lib/init/rw in otherwise non-ephemeral directory trees as well as /dev/.* and /dev/shm which are not device files.)</p>
 <p>/sbin contains important administrative commands that should generally only be employed by the superuser.</p>
 <p>/srv can contain data directories of services such as HTTP (/srv/www/) or FTP.</p>
-<p>/sys is a virtual filesystem that can be accessed to set or obtain information about the kernel's view of the system.</p>
+<p>/sys is a virtual filesystem that can be accessed to set or obtain information about the kernel’s view of the system.</p>
 <p>/tmp is a place for temporary files used by applications.</p>
 <p>/usr contains the majority of user utilities and applications, and partly replicates the root directory structure, containing for instance, among others, /usr/bin/ and /usr/lib.</p>
 <p>/var is dedicated to variable data, such as logs, databases, websites, and temporary spool (e-mail etc.) files that persist from one boot to the next. A notable directory it contains is /var/log where system log files are kept.</p>
